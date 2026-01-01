@@ -1,0 +1,81 @@
+.google-logo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo-text {
+    font-size: 72px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -1px;
+    font-family: 'Product Sans', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.letter {
+    display: inline-block;
+    animation: colorShift 3s ease-in-out infinite;
+}
+
+.letter-0 {
+    color: #4285f4;
+    /* Google Blue */
+    animation-delay: 0s;
+}
+
+.letter-1 {
+    color: #ea4335;
+    /* Google Red */
+    animation-delay: 0.1s;
+}
+
+.letter-2 {
+    color: #fbbc04;
+    /* Google Yellow */
+    animation-delay: 0.2s;
+}
+
+.letter-3 {
+    color: #34a853;
+    /* Google Green */
+    animation-delay: 0.3s;
+}
+
+@keyframes colorShift {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.letter:hover {
+    animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 36px;
+    }
+}

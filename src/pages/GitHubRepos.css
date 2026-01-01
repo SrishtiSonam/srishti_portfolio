@@ -1,0 +1,266 @@
+.github-container {
+    background: #0d1117;
+    min-height: 100vh;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.loading,
+.no-repos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    gap: 16px;
+    color: #8b949e;
+}
+
+/* Header */
+.github-header {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 32px 24px;
+}
+
+.header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.github-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #c9d1d9;
+}
+
+.github-header p {
+    font-size: 16px;
+    color: #8b949e;
+    margin: 0;
+}
+
+/* Content */
+.github-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.search-input-wrapper svg {
+    color: #8b949e;
+    margin-right: 8px;
+}
+
+.repo-search {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #c9d1d9;
+    font-size: 14px;
+}
+
+.repo-search::placeholder {
+    color: #8b949e;
+}
+
+.repo-count {
+    font-size: 14px;
+    color: #8b949e;
+}
+
+/* Repos List */
+.repos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.repo-card {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 16px;
+    transition: all 0.2s ease;
+}
+
+.repo-card:hover {
+    border-color: #8b949e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.repo-title-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.repo-icon {
+    color: #8b949e;
+    flex-shrink: 0;
+}
+
+.repo-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.repo-title a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.repo-title a:hover {
+    text-decoration: underline;
+}
+
+.repo-visibility {
+    background: #21262d;
+    border: 1px solid #30363d;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #8b949e;
+    text-transform: uppercase;
+}
+
+.repo-description {
+    font-size: 14px;
+    color: #8b949e;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.repo-topics {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.topic-tag {
+    background: #1f6feb1a;
+    color: #58a6ff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.repo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.repo-stats {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 12px;
+    color: #8b949e;
+}
+
+.language-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.demo-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.demo-link:hover {
+    background: #21262d;
+    border-color: #8b949e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .github-header {
+        padding: 24px 16px;
+    }
+
+    .github-header h1 {
+        font-size: 24px;
+    }
+
+    .github-content {
+        padding: 16px;
+    }
+
+    .search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input-wrapper {
+        max-width: 100%;
+    }
+
+    .repo-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .repo-stats {
+        flex-wrap: wrap;
+    }
+}

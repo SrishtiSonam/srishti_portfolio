@@ -1,0 +1,266 @@
+.linkedin-container {
+    background: #f3f2ef;
+    min-height: 100vh;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.loading,
+.no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    color: #666;
+}
+
+/* Header */
+.linkedin-header {
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 40px 24px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.linkedin-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #000;
+}
+
+.linkedin-header p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+/* Content */
+.linkedin-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.tab:hover {
+    background: #f3f2ef;
+    border-color: #0a66c2;
+    color: #0a66c2;
+}
+
+.tab.active {
+    background: #0a66c2;
+    border-color: #0a66c2;
+    color: white;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 40px;
+    bottom: 40px;
+    width: 2px;
+    background: #e0e0e0;
+}
+
+/* Experience Card */
+.experience-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 16px;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    background: #0a66c2;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #000;
+}
+
+.card-organization {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 14px;
+    color: #666;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.current-badge {
+    background: #01754f;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.card-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000;
+    margin: 0;
+}
+
+.achievements {
+    margin-top: 8px;
+}
+
+.achievements h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #000;
+}
+
+.achievements ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.achievements li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.skills-used {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.skill-tag {
+    background: #f3f2ef;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #e0e0e0;
+}
+
+.field-of-study,
+.gpa {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .linkedin-header {
+        padding: 24px 16px;
+    }
+
+    .linkedin-header h1 {
+        font-size: 24px;
+    }
+
+    .linkedin-content {
+        padding: 16px;
+    }
+
+    .timeline::before {
+        left: 24px;
+    }
+
+    .experience-card {
+        padding: 16px;
+        flex-direction: column;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .filter-tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        justify-content: center;
+    }
+}

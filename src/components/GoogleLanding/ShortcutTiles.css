@@ -1,0 +1,80 @@
+.shortcut-tiles {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding: 0 16px;
+}
+
+.shortcut-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    background: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    min-width: 96px;
+}
+
+.shortcut-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shortcut-tile:active {
+    transform: translateY(-2px);
+}
+
+.tile-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--tile-color, #4285f4);
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.shortcut-tile:hover .tile-icon {
+    transform: scale(1.1);
+}
+
+.tile-name {
+    font-size: 13px;
+    color: #202124;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .shortcut-tiles {
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    .shortcut-tile {
+        min-width: 80px;
+        padding: 12px;
+    }
+
+    .tile-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tile-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tile-name {
+        font-size: 12px;
+    }
+}
